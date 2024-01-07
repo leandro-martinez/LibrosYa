@@ -16,6 +16,7 @@
   border: none;
   list-style: none;
   outline: none;
+  text-transform: capitalize;
 }
 html {
   scroll-behavior: smooth;
@@ -39,6 +40,29 @@ body {
     font-size: 0.8rem;
     padding: 8px 16px;
   }
+}
+.header-section {
+  margin: 16px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  & a {
+    font-size: 14px;
+    color: var(--color-700);
+    transition: all 0.3s;
+    &:hover {
+      border-bottom: 1px solid;
+      color: var(--color-500);
+    }
+  }
+}
+.grid-books {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
 }
 /* NAVIGATION */
 .container-header {
@@ -213,5 +237,40 @@ body {
   }
   & .btn-join:active {
     background-color: var(--color-700);
+  }
+}
+/* MAIN */
+.container-main {
+  padding-top: 60px;
+}
+.card-book {
+  border-radius: 4px;
+  overflow: hidden;
+
+  & img {
+    object-fit: cover;
+    cursor: pointer;
+    width: 100%;
+    aspect-ratio: 2/3;
+    transition: transform 0.5s;
+  }
+  &:hover img {
+    transform: scale(1.03);
+  }
+  & .content {
+    padding: 4px;
+  }
+  & h3 {
+    font-size: 16px;
+    color: var(--color-700);
+  }
+  & h4 {
+    font-size: 14px;
+    color: gray;
+  }
+  & p {
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 14px;
   }
 }
