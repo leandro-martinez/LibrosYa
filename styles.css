@@ -173,7 +173,7 @@ body {
 
   & .hero-image {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   @media (width <= 768px) {
@@ -185,6 +185,7 @@ body {
     }
     & .hero-image {
       width: 85%;
+      aspect-ratio: 1/1;
     }
   }
 }
