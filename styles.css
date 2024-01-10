@@ -198,10 +198,11 @@ body {
     font-size: 56px;
   }
   & p {
-    max-width: 560px;
-    font-size: 18px;
+    max-width: 500px;
+    font-size: 16px;
     margin-bottom: 18px;
     line-height: 24px;
+    text-transform: none;
   }
   & .hero-buttons {
     display: flex;
@@ -274,5 +275,35 @@ body {
     margin-top: 6px;
     font-weight: bold;
     font-size: 14px;
+  }
+}
+/* About us */
+.section-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-around;
+  & .card {
+    min-width: 120px;
+    width: 320px;
+    height: fit-content;
+    padding: 20px;
+    text-align: center;
+
+    & h3 {
+      margin: 16px 0px;
+      font-weight: bold;
+    }
+    & img {
+      color: var(--color-700);
+    }
+    & svg {
+      width: 40px;
+      stroke: var(--color-700);
+      fill: var(--color-700);
+    }
+    & p {
+      text-wrap: balance;
+    }
   }
 }
